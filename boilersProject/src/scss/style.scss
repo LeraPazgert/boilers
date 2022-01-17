@@ -1,2 +1,177 @@
-@import "fonts";
-body {}
+* {
+  margin: 0;
+  padding: 0;
+}
+@mixin font($weight, $size, $line) {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+  text-align: center;
+  text-transform: uppercase;
+}
+@mixin boiler() {
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 280px;
+  height: 350px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.container {
+  margin: 0 auto;
+  padding: 34px 100px 0;
+  box-sizing: border-box;
+  max-width: 1140px;
+}
+
+.header {
+  width: 100%;
+  background: linear-gradient(
+      0deg,
+      rgba(91, 93, 104, 0.6),
+      rgba(85, 87, 97, 0.6)
+    ),
+    url("../img/img (3).jpg");
+  min-height: 740px;
+  background-size: cover;
+  &__title {
+    margin: 180px auto 20px;
+    width: 734px;
+    height: 171px;
+    @include font(500, 68px, 95px);
+    color: #ffffff;
+    letter-spacing: 0.02em;
+  }
+  &__text {
+    margin: auto;
+    width: 734px;
+    height: 22px;
+    @include font(500, 18px, 27px);
+    color: #ffffff;
+  }
+}
+.main {
+  .main__benefits {
+    @include font(500, 30px, 40px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 280px;
+    z-index: 1;
+    margin-top: -150px;
+    background: #f7f7f7;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    &_red {
+      color: #f7654a;
+      width: 300px;
+    }
+    &_black {
+      color: #000000;
+      width: 310px;
+    }
+    &_grey {
+      color: #999999;
+      width: 310px;
+    }
+  }
+  .section {
+    width: 100%;
+    height: 190px;
+    margin-top: 40px;
+    background: #f7654a;
+    &__title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include font(800, 40px, 55px);
+      letter-spacing: 0.02em;
+      color: #ffffff;
+    }
+  }
+  .section_grey {
+    background: #404149;
+    height: 220px;
+  }
+  .services {
+    &__title {
+      @include font(500, 36px, 53px);
+      color: #000000;
+      margin-top: 100px;
+      margin-bottom: 40px;
+    }
+    &__wrapper {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    &__item {
+      width: 300px;
+      height: 270px;
+      background: #f7f7f7;
+      box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+      .item__text {
+        @include font(500, 20px, 31px);
+        letter-spacing: 0.02em;
+        color: #000000;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+.item__icon {
+  margin-top: 20px;
+  margin-left: 105px;
+  width: 80px;
+  height: 80px;
+}
+.boilers {
+  &__title {
+    @include font(500, 36px, 53px);
+    color: #000000;
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  &__1 {
+    background-image: url(@img/boiler.jpg);
+    @include boiler();
+  }
+  &__2 {
+    background-image: url(@img/boiler2.jpg.png);
+    @include boiler();
+  }
+  &__3 {
+    background-image: url(@img/boiler3.png);
+    @include boiler();
+  }
+  &__4 {
+    background-image: url(@img/boiler4.jpg);
+    @include boiler();
+  }
+  &__5 {
+    background-image: url(@img/boiler5.png);
+    @include boiler();
+  }
+  &__6 {
+    background-image: url(@img/boiler6.png);
+    @include boiler();
+  }
+  &__7 {
+    background-image: url(@img/boiler7.png);
+    @include boiler();
+  }
+  &__8 {
+    background-image: url(@img/boiler8.png);
+    @include boiler();
+  }
+}

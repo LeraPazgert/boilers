@@ -1,29 +1,228 @@
-@font-face {
-  font-family: pobeda;
-  font-display: swap;
-  src: url("../fonts/pobeda-regular1.woff2") format("woff2"), url("../fonts/pobeda-regular1");
-  font-weight: 400;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 34px 100px 0;
+  box-sizing: border-box;
+  max-width: 1140px;
+}
+
+.header {
+  width: 100%;
+  background: linear-gradient(0deg, rgba(91, 93, 104, 0.6), rgba(85, 87, 97, 0.6)), url("../img/img (3).jpg");
+  min-height: 740px;
+  background-size: cover;
+}
+.header__title {
+  margin: 180px auto 20px;
+  width: 734px;
+  height: 171px;
+  font-family: "Oswald", sans-serif;
   font-style: normal;
+  font-weight: 500;
+  font-size: 68px;
+  line-height: 95px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 0.02em;
 }
-@font-face {
-  font-family: teddy;
-  font-display: swap;
-  src: url("../fonts/teddy-bear.woff2") format("woff2"), url("../fonts/teddy-bear");
-  font-weight: 400;
+.header__text {
+  margin: auto;
+  width: 734px;
+  height: 22px;
+  font-family: "Oswald", sans-serif;
   font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
 }
-@font-face {
-  font-family: you20133;
-  font-display: swap;
-  src: url("../fonts/you20133.woff2") format("woff2"), url("../fonts/you20133");
-  font-weight: 400;
+
+.main .main__benefits {
+  font-family: "Oswald", sans-serif;
   font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 280px;
+  z-index: 1;
+  margin-top: -150px;
+  background: #f7f7f7;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
-body {
-  font-family: teddy;
+.main .main__benefits_red {
+  color: #f7654a;
+  width: 300px;
 }
-body span {
-  color: red;
-  font-family: pobeda;
+.main .main__benefits_black {
+  color: #000000;
+  width: 310px;
+}
+.main .main__benefits_grey {
+  color: #999999;
+  width: 310px;
+}
+.main .section {
+  width: 100%;
+  height: 190px;
+  margin-top: 40px;
+  background: #f7654a;
+}
+.main .section__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 800;
   font-size: 40px;
+  line-height: 55px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+.main .section_grey {
+  background: #404149;
+  height: 220px;
+}
+.main .services__title {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 53px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+.main .services__wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.main .services__item {
+  width: 300px;
+  height: 270px;
+  background: #f7f7f7;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.main .services__item .item__text {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 31px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #000000;
+  margin-top: 20px;
+}
+
+.item__icon {
+  margin-top: 20px;
+  margin-left: 105px;
+  width: 80px;
+  height: 80px;
+}
+
+.boilers__title {
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 53px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+.boilers__wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.boilers__1 {
+  background-image: url(../img/boiler.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 280px;
+  height: 350px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.boilers__2 {
+  background-image: url(../img/boiler2.jpg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 280px;
+  height: 350px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.boilers__3 {
+  background-image: url(../img/boiler3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 280px;
+  height: 350px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.boilers__4 {
+  background-image: url(../img/boiler4.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 280px;
+  height: 350px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.boilers__5 {
+  background-image: url(../img/boiler5.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 280px;
+  height: 350px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.boilers__6 {
+  background-image: url(../img/boiler6.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 280px;
+  height: 350px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.boilers__7 {
+  background-image: url(../img/boiler7.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 280px;
+  height: 350px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.boilers__8 {
+  background-image: url(../img/boiler8.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 280px;
+  height: 350px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
