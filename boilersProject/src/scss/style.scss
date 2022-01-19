@@ -4,6 +4,10 @@
     }
     
     $wtc: #ffffff;
+    $fs: calc(30px + 38 *(100vw/1280));
+    $afs:calc(30px + (38 + 38*0.7) *((100vw - 320px)/1280));
+    $sectionfs:calc(17px + 23 *(100vw/1280));
+    $sectionafs:calc(17px + (23 + 23*0.7) *((100vw - 320px)/1280));
     @mixin wrapper() {
         width: 100%;
         display: flex;
@@ -11,12 +15,11 @@
         justify-content: center;
         gap: 15px;
     }
-    
-    @mixin font($weight, $size, $line) {
+    @mixin font($weight, $fs, $line) {
         font-family: "Oswald", sans-serif;
         font-style: normal;
         font-weight: $weight;
-        font-size: $size;
+        font-size: $fs;
         line-height: $line;
         text-align: center;
         text-transform: uppercase;
@@ -40,7 +43,6 @@
     
     .container {
         margin: 0 auto;
-        padding: 34px 100px 0;
         box-sizing: border-box;
         max-width: 1140px;
     }
@@ -50,19 +52,20 @@
         background: linear-gradient( 0deg, rgba(91, 93, 104, 0.6), rgba(85, 87, 97, 0.6)), url("../img/img (3).jpg");
         min-height: 740px;
         background-size: cover;
+        padding-top: 160px;
+        display: flex;
+        justify-content: center;
         &__title {
-            margin: 180px auto 20px;
-            width: 734px;
-            height: 171px;
+            margin: auto auto 30px auto;
+            min-height: 171px;
             @include font(500,
-            68px,
+            $fs,
             95px);
             color: $wtc;
             letter-spacing: 0.02em;
         }
         &__text {
             margin: auto;
-            width: 734px;
             height: 22px;
             @include font(500,
             18px,
@@ -87,9 +90,10 @@
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            height: 280px;
+            max-width: 940px;
+            min-height: 280px;
             z-index: 1;
-            margin-top: -150px;
+            margin: -150px auto auto auto;
             background: #f7f7f7;
             box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
             &_red {
@@ -107,14 +111,13 @@
         }
         .section {
             width: 100%;
-            height: 190px;
+            min-height: 190px;
             margin-top: 40px;
             background: #f7814a;
             transition: 1s;
             &:hover{
                 transition: .3s;
                 background: #bdbbbb;
-                cursor: pointer;
                 color: #f7814a;
             }
             &__title {
@@ -122,7 +125,7 @@
                 justify-content: center;
                 align-items: center;
                 @include font(800,
-                40px,
+                $sectionfs,
                 55px);
                 letter-spacing: 0.02em;
                 color: $wtc;
@@ -130,7 +133,7 @@
         }
         .section_grey {
             background: #404149;
-            height: 220px;
+           
         }
         .services {
             &__wrapper {
@@ -151,7 +154,6 @@
                 }
                 &:hover{
                     transition: .3s;
-                    cursor: pointer;
                     border-radius: 10px;
                     border-bottom: 5px solid #f7814a;
 
@@ -205,7 +207,6 @@
         }
         .boilers__item:hover{
            transform: scale(1.2);
-           cursor: pointer;
         }
     }
     
@@ -227,7 +228,6 @@
         transition: 1s;
         &:hover{
             transform: scale(1.2);
-            cursor: pointer;
         }
         &__title {
             @include font(500,
@@ -265,43 +265,33 @@
     }
     
     .advantages {
-        background: linear-gradient( 0deg, rgba(91, 93, 104, 0.6), rgba(85, 87, 97, 0.6)), url("../img/img (2).jpg");
+        background: linear-gradient( 0deg, rgba(91, 93, 104, 0.68), rgba(85, 87, 97, 0.68)), url("../img/img (2).jpg");
         min-height: 500px;
         background-size: cover;
-        margin-top: 40px;
-        padding-left: 10px;
-        padding-right: 10px;
+        margin-top: 50px;
+        padding-left: 15px;
+        padding-right: 20px;
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        &__title {
-            @include font(800,
-            50px,
-            50px);
-            color: $wtc;
-        }
+        align-items: center;
         &__wrapper {
             display: flex;
             flex-direction: row;
-            gap: 10px;
+            justify-content: space-around;
+            align-items: center;
+            gap:30px;
         }
         &__item {
             display: flex;
-            justify-content: center;
             align-items: center;
-            background-color: $wtc;
-            color: #000000;
-            width: 240px;
-            height: 245px;
+            color: $wtc;
+            max-width: 300px;
             @include font(500,
-            23px,
-            45px);
-            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
-            border-radius: 10px;
+            30px,
+            40px);
         }
     }
     .footer{
-        height: 400px;
+        min-height: 300px;
         &__wrapper{
             display: flex;
             flex-direction: row;
@@ -322,3 +312,43 @@
             text-decoration: none;
         }
     }
+    
+ @media (max-width: 950px){
+    .advantages{
+        &__wrapper {
+            flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap:40px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .header__title{
+        font-size: $afs;
+    }
+    .section__title{
+        font-size: $sectionafs;
+    }
+    .advantages__item{
+        font-size: 25px;
+    }
+} 
+@media (max-width: 630px){
+    .main__benefits{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+}
+@media (max-width: 591px){
+    .header{
+        padding-top: 100px;
+    }
+}
+@media (max-width: 500px){
+    .footer__wrapper{
+        flex-direction: column;
+        gap:40px;
+    }
+}
