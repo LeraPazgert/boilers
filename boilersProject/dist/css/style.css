@@ -12,9 +12,9 @@
 .header {
   width: 100%;
   background: linear-gradient(0deg, rgba(91, 93, 104, 0.6), rgba(85, 87, 97, 0.6)), url("../img/img (3).jpg");
-  min-height: 740px;
+  min-height: 710px;
   background-size: cover;
-  padding-top: 160px;
+  padding-top: 70px;
   display: flex;
   justify-content: center;
 }
@@ -312,7 +312,7 @@
   height: 200px;
 }
 .room__7 {
-  background-image: url(..//img/room\ \(6\).jpg);
+  background-image: url(..//img/room\ \(7\).jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -348,6 +348,28 @@
   line-height: 40px;
   text-align: center;
   text-transform: uppercase;
+}
+
+.documents {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.documents__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.documents .documents__item {
+  color: #000000;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 20px;
+}
+.documents .documents__item:hover {
+  color: blue;
 }
 
 .footer {
