@@ -18,7 +18,7 @@
   display: flex;
   justify-content: center;
 }
-.header__title {
+.header__subtitle {
   margin: auto;
   min-height: 150px;
   font-family: "Oswald", sans-serif;
@@ -29,9 +29,9 @@
   text-align: center;
   text-transform: uppercase;
   color: #dbd9d9;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
-.header__subtitle {
+.header__title {
   margin: auto auto 30px auto;
   min-height: 171px;
   font-family: "Oswald", sans-serif;
@@ -314,7 +314,7 @@
   }
 }
 @media (max-width: 767px) {
-  .header__subtitle {
+  .header__title {
     font-size: calc(30px + 64.6 * (100vw - 320px) / 1280);
     line-height: 75px;
   }
