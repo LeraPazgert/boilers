@@ -14,11 +14,24 @@
   background: linear-gradient(0deg, rgba(91, 93, 104, 0.6), rgba(85, 87, 97, 0.6)), url("../img/img (3).jpg");
   min-height: 710px;
   background-size: cover;
-  padding-top: 70px;
+  padding-top: 50px;
   display: flex;
   justify-content: center;
 }
 .header__title {
+  margin: auto;
+  min-height: 150px;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 41px;
+  line-height: 55px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #dbd9d9;
+  letter-spacing: 0.02em;
+}
+.header__subtitle {
   margin: auto auto 30px auto;
   min-height: 171px;
   font-family: "Oswald", sans-serif;
@@ -72,7 +85,7 @@
   max-width: 940px;
   min-height: 280px;
   z-index: 1;
-  margin: -150px auto auto auto;
+  margin: -120px auto auto auto;
   background: #f7f7f7;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
@@ -123,6 +136,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+  -webkit-margin-before: 15px;
 }
 .main .services__item {
   width: 300px;
@@ -161,6 +175,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+  -webkit-margin-before: 15px;
 }
 .boilers .boilers__item {
   overflow: hidden;
@@ -187,6 +202,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+  -webkit-margin-before: 15px;
 }
 .boilers-rooms .room {
   display: flex;
@@ -262,6 +278,7 @@
 
 .footer {
   min-height: 300px;
+  padding-bottom: 45px;
 }
 .footer__wrapper {
   display: flex;
@@ -274,6 +291,7 @@
   flex-direction: column;
   align-items: center;
   gap: 25px;
+  -webkit-margin-before: 25px;
 }
 .footer .item__text {
   font-family: "Oswald", sans-serif;
@@ -296,8 +314,9 @@
   }
 }
 @media (max-width: 767px) {
-  .header__title {
+  .header__subtitle {
     font-size: calc(30px + 64.6 * (100vw - 320px) / 1280);
+    line-height: 75px;
   }
 
   .section__title {
@@ -311,12 +330,12 @@
 @media (max-width: 630px) {
   .main__benefits {
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 35px;
   }
 }
 @media (max-width: 591px) {
   .header {
-    padding-top: 100px;
+    padding-top: 40px;
   }
 }
 @media (max-width: 500px) {
